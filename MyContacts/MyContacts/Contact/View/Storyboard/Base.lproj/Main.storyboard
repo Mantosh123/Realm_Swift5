@@ -55,6 +55,10 @@
                                                 <constraint firstItem="5Re-YZ-4sf" firstAttribute="top" secondItem="BlF-2w-0zu" secondAttribute="top" id="wEm-0P-fn6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="Rm0-WV-s2g" id="blT-Wt-aQD"/>
+                                            <outlet property="phoneNoLabel" destination="I2h-2m-en2" id="cQi-Ww-6lk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -62,13 +66,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4PF-1F-loi"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Contact Fond. Please add." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4md-W8-O1g">
+                                <rect key="frame" x="88.666666666666686" y="416.33333333333331" width="216" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4md-W8-O1g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9e0-qe-46g"/>
                             <constraint firstAttribute="trailing" secondItem="UQR-Dm-RnR" secondAttribute="trailing" id="Bcd-Kz-Hqg"/>
                             <constraint firstItem="UQR-Dm-RnR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CD3-di-ugN"/>
                             <constraint firstAttribute="bottom" secondItem="UQR-Dm-RnR" secondAttribute="bottom" id="pO2-Df-7k3"/>
+                            <constraint firstItem="4md-W8-O1g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ufS-qw-eIF"/>
                             <constraint firstItem="UQR-Dm-RnR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zQ6-DC-OpQ"/>
                         </constraints>
                     </view>
@@ -87,6 +99,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="contactTableView" destination="UQR-Dm-RnR" id="vPQ-X4-Zba"/>
+                        <outlet property="noDataLabel" destination="4md-W8-O1g" id="OKJ-eC-vDF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -125,7 +138,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Update Contact"/>
                                         <connections>
-                                            <action selector="updateContactAction:" destination="xIA-ig-CkI" eventType="touchUpInside" id="pCj-kL-sct"/>
+                                            <action selector="updateContactAction:" destination="pDs-DE-bF0" eventType="touchUpInside" id="sFe-HA-4Ih"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEG-du-4M3">
@@ -135,7 +148,7 @@
                                             <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="deleteContact:" destination="xIA-ig-CkI" eventType="touchUpInside" id="7nz-Yw-lqa"/>
+                                            <action selector="deleteContact:" destination="pDs-DE-bF0" eventType="touchUpInside" id="m6i-4s-c8U"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -169,11 +182,15 @@
                             <constraint firstItem="6fA-mi-ap6" firstAttribute="leading" secondItem="S3V-Sq-LPT" secondAttribute="leading" constant="40" id="xjf-Ot-fIY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fNameTextField" destination="HvU-nH-uso" id="a1J-VI-yrh"/>
+                        <outlet property="lNameTextField" destination="hvM-yd-tKb" id="Ch1-Qk-z3s"/>
+                        <outlet property="phoneNumberTextField" destination="Kho-yY-a7N" id="fXo-KQ-ak9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Grq-sd-8Mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="xIA-ig-CkI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1568.7022900763359" y="5.6338028169014089"/>
+            <point key="canvasLocation" x="1595" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="N1R-SE-qZh">

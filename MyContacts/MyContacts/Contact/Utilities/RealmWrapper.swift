@@ -33,7 +33,7 @@ class RealmWrapper {
     }
     
     // Read data from data base
-    func getObjects(objc: Object.Type) -> Results <Object> {
+    func getObjects(objc: Object.Type) -> Results <Object>? {
         return RealmWrapper.realm.objects(objc)
     }
     

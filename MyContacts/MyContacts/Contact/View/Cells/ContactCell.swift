@@ -9,19 +9,21 @@ import UIKit
 
 class ContactCell: UITableViewCell {
 
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var phoneNoLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func updateCell(with contact: Contact) {
-        textLabel?.text = contact.firstName
-        detailTextLabel?.text = contact.lastName
+        nameLabel?.text = contact.firstName
+        phoneNoLabel?.text = contact.contactNumber
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 
