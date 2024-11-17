@@ -18,8 +18,8 @@ class ContactListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "Contacts List"
         noDataLabel.isHidden = false
+        self.title = "Contacts"
         setStatusBarBGColor()
     }
     

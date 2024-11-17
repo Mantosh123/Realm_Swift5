@@ -19,7 +19,7 @@ class ContactDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "Contacts List"
+        self.title = "Edit Contact"
         updateDetailsView()
     }
     
